@@ -1,0 +1,9 @@
+@startuml
+System -> Camera: detect()
+Camera -> Camera: get_img()
+System -> System: calculate_coordinates(img)
+System -> Robot: transfer_coordinates(int)
+Robot -> Robot: calculate_way(int)
+Robot -> Robot: move(int)
+Robot -> Robot: clear()
+@enduml

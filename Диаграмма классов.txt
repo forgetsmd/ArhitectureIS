@@ -1,0 +1,20 @@
+@startuml
+class System
+{
+   detect()
+   calculate_coordinates(img)
+   transfer_coordinates(int)
+}
+class Camera
+{
+   get_img()
+}
+class Robot
+{
+   calculate_way(int)
+   move(int)
+   clear()
+}
+Camera --o System: has
+Robot --o System: has
+@enduml
