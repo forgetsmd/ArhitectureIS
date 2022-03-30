@@ -1,0 +1,29 @@
+@startuml
+}
+state System{
+   [*] --> Wait
+   Wait --> Detecting: t > 15
+   Detecting --> Analize: Картинка получена
+   Analize --> Wait: Если есть графити
+   Analize --> CalculateCord: Если нет графити
+   CalculateCord --> Transfer: Вычисление закончено
+   Transfer --> Wait: Передача завершена
+
+}
+state Camera{
+   [*] --> Observation
+   Observation --> SendImg: Получение запроса
+   SendImg --> Observation: Завершение отправки
+}
+state Robot{
+   [*] --> Waiting
+   Waiting --> CalculateWay: Получение координат
+   CalculateWay --> Move: Вычисление закончено
+   CalculateWay --> Turn: Вычисление закончено
+   Move --> Turn
+   Turn --> Move
+   Move --> Clear
+   Turn --> Clear
+   Clear --> Waiting
+}
+@enduml
