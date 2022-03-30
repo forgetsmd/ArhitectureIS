@@ -40,6 +40,8 @@ def find_contours(img):
     cv.waitKey()
     cv.destroyAllWindows()
 
-img = cv.imread('grafity.jpg', )
+path = r'/ArhitectureIS/src/example.jpg' # for docker
+#path = r'src/example.jpg' # for VS Code
+img = cv.imread(path)
 print(img)
 find_contours(img)
