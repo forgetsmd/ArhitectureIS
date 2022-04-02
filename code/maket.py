@@ -1,5 +1,7 @@
 class Robot:
     __cordinat = None
+    def __init__(self) -> None:
+        print("Robot start...")
     def set_cordinat(cord):
         __cordinat = cord
     def calculat_way():
@@ -10,12 +12,17 @@ class Robot:
         pass
 
 class Camera:
+    def __init__(self) -> None:
+        print("Camera start...")
     def get_img():
         pass
 
 class System:
-    robot = Robot()
-    camera = Camera()
+    
+    def __init__(self) -> None:
+        print("System start...")
+        self.robot = Robot()
+        self.camera = Camera()
     def detect():
         pass
     def calculate_coordinates():
@@ -23,5 +30,4 @@ class System:
     def transfer_coordinates():
         pass
 
-robot = Robot()
-print(robot.__cordinat)
+sys = System()
