@@ -33,7 +33,6 @@ class NetControler(Controler):
         print("NetControler")
 
 class System:
-    
     def __init__(self) -> None:
         print("System start...")
         self.robot = Robot()

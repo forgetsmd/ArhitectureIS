@@ -10,5 +10,5 @@ RUN apt-get -y install python3-pip
 RUN pip install opencv-python
 RUN apt-get install nano
 RUN apt-get install ffmpeg libsm6 libxext6  -y
-COPY src/maket.py /ArhitectureIS/code/maket.py
-COPY doc/example.jpg /ArhitectureIS/src/example.jpg
+COPY src/maket.py /ArhitectureIS/src/maket.py
+COPY doc/example.jpg /ArhitectureIS/doc/example.jpg
